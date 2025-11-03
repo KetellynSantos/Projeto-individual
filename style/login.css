@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: 0;
+}
+
+body {
+    background-image: url('../img/pagLogin.jpg');
+    background-repeat: no-repeat;
+       background-size: cover;
+}
+
+.inicio {
+    background-color: #d9d9d98f;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+justify-content: center;
+align-items: center;
+}
+
+ul {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.lista, .log {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.log {
+    background-color: #6d0505b6;
+    padding: 15px 25px;
+    border-radius: 38px;
+    font-size: 22px;
+}
+
+.lista:hover {
+    color: #6D0505;
+}
+
+.log:hover {
+    color: black;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 155px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.acesso {
+    /*
+    background-color: #3232329c;
+    text-align: center;
+    padding: 200px 55px;
+    border-radius: 50px;
+    align-self: center;
+    */
+    background-color: #1d202c88;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 35px;
+    gap: 15px;
+}
+
+
+
+.login, .btnLog {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 32px;
+}

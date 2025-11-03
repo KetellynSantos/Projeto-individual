@@ -52,6 +52,10 @@ ul {
     color: #6D0505;
 }
 
+.log:hover {
+    color: black;
+}
+
 .prisecao {
     display: flex;
         text-align: center;
@@ -99,3 +103,9 @@ p {
     padding: 6px 20px;
     border-radius: 32px;
 }
+
+.tagCad {
+    text-decoration: none;
+    color: white;
+}
+
