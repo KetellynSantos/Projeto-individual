@@ -109,3 +109,16 @@ p {
     color: white;
 }
 
+.sec-card {
+    flex-direction: row;
+    display: flex;
+    gap: 15px;
+    padding-top: 45px;
+}
+
+.card {
+    background-color: #323232;
+    border-radius: 32px;
+    padding: 20px;
+}
+
