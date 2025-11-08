@@ -18,12 +18,13 @@ body {
 .inicio {
     background-color: #d9d9d98f;
     margin-top: 20px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 50px;
     justify-content: center;
     align-items: center;
-    width: 40%;
-    margin-left: 30%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 ul {
@@ -43,7 +44,7 @@ ul {
 
 .log {
     background-color: #6d0505b6;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-radius: 38px;
     margin-left: 25px;
 }
@@ -89,6 +90,17 @@ p {
        
 }
 
+.bd.img {
+        height: 100vh;
+    background-image: url('../dat-web/web-data-viz/img/imgCad.jpg');
+   display: block;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .btn-log {
     border: #6D0505 solid 2px;
     background-color: black;
@@ -112,13 +124,36 @@ p {
 .sec-card {
     flex-direction: row;
     display: flex;
-    gap: 15px;
-    padding-top: 45px;
+    padding-top: 150px;
+    justify-content: space-around;
+    /*gap: 16px;*/
 }
 
 .card {
     background-color: #323232;
     border-radius: 32px;
-    padding: 20px;
+    padding: 30px;
+    width: 26%;
+    height: auto;
+    /*
+    margin-left: auto;
+    margin-right: auto;
+    margin: 25px;
+    */
+}
+
+.text-card {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    margin: 20px;
+    font-size: 24px;
+}
+
+.para-card {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 200;
 }
 
