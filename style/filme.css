@@ -31,8 +31,77 @@ body {
     color: white;
     font-size: 16px;
     font-family: "Poppins", sans-serif;
+    text-align: left;
 }
 
 .btn-Assistir {
     border: solid 2px #6D0505;
+    background-color: #141414;
+    border-radius: 50px;
+    width: 50%;
+    padding: 10px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.btn-Assistir:hover {
+    background-color: #a70505;
+    transition: 1s;
+    transform: scale(1.2);
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.divEntrada {
+    display: flex;
+    flex-direction: column;
+}
+
+.filmes {
+    padding-top: 100px;
+}
+
+.divCard {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    border: solid 3px #6D0505;
+    background-color: #141414;
+    border-radius: 32px;
+    padding-bottom: 25px;
+}
+
+.card:hover {
+    background-color: #a70505;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+img {
+    border-radius: 32px 32px 0px 0px;
+}
+
+.txtFilme {
+    color: aliceblue;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 500;
+}
+
+.title {
+    font-size: 42px;
+    color: aliceblue;
+    font-family: "Chakra Petch", sans-serif;
+    padding-left: 48px;
+    margin-bottom: 36px;
+}
+
