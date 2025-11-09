@@ -15,48 +15,6 @@ body {
     justify-content: center;
 }
 
-.inicio {
-    background-color: #d9d9d98f;
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 50px;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-ul {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    text-decoration: none;
-    list-style: none;
-    font-family: "Poppins", sans-serif;
-}
-
-.lista, .log {
-    color: aliceblue;
-    text-decoration: none;
-    font-size: 25px;
-}
-
-.log {
-    background-color: #6d0505b6;
-    padding: 10px 20px;
-    border-radius: 38px;
-    margin-left: 25px;
-}
-
-.lista:hover {
-    color: #6D0505;
-}
-
-.log:hover {
-    color: black;
-}
-
 .prisecao {
     display: flex;
         text-align: center;
@@ -157,3 +115,105 @@ p {
     font-weight: 200;
 }
 
+.secBatman {
+    padding-top: 200px;
+}
+
+.divBatman {
+   display: flex;
+    font-family: "Poppins", sans-serif;
+    gap: 200px;
+   /* padding: 30px;
+    max-width: 1200px;
+    /*width: 60%;*/
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.batText {
+    color: white;
+    max-width: 700px;
+    text-align: left;
+    /*
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;*/
+}
+
+.para-Bat {
+   /* line-height: 1.6;*/
+   font-size: 30px;
+    margin-right: 20px;
+}
+
+.title-bat {
+    text-align: left;
+    margin-bottom: 15px;
+   /* font-size: 1.8em;*/
+   font-size: 42px;
+}
+
+.secEvo {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.title-Evo {
+    color: white;
+    padding-bottom: 100px;
+}
+
+.footer {
+    background-color: #5c5c5c62;
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+    font-family: "Poppins", sans-serif;
+}
+
+.mapa {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 24px;
+    color: #6D0505;
+}
+
+.title-footer {
+    color: #6D0505;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+a:hover {
+    color: #6D0505;
+}
+
+.contato {
+    color: white;
+}
+
+p {
+    font-size: 15px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.fotti {
+    color: white;
+    font-size: 32px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
