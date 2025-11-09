@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+}
+
+.secBeggins {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /*
+    background-image: url(../img/imgFilmesBeggins.jpg);
+   
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    padding-top: 10px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;*/
+}
+
+.textBe {
+    color: white;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn-Assistir {
+    border: solid 2px #6D0505;
+}
