@@ -9,10 +9,17 @@ body {
 }
 
 .secBeggins {
-    display: flex;
-    text-align: center;
+
     align-items: center;
     justify-content: center;
+
+    display: flex;
+ 
+    background-image: url(../img/imgFilmesBeggins.jpg);
+
+    min-height: 100vh;
+    background-repeat: no-repeat;
+
     /*
     background-image: url(../img/imgFilmesBeggins.jpg);
    
@@ -29,7 +36,7 @@ body {
 
 .textBe {
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     font-family: "Poppins", sans-serif;
     text-align: left;
 }
