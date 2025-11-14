@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batmoveis | KittyWay</title>
+    <link rel="shortcut icon" href="logo/batmanLogo (2).png" type="image/x-icon">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/batmov.css">
+        <title>Batmoveis | KittyWay</title>
 </head>
 <body>
         <header class="inicio">
@@ -16,5 +29,118 @@
             <li><a href="login.html" class="log">Login</a></li>
         </ul>
     </header>
+
+    <section class="inicio_bat">
+        <div class="bemVindo">
+        <span class="texto">Bem-Vindos ao <br> Batmoveis</span>
+        <button class="btn-jogo"<a href="jogo.html" target="_self">Jogar</a></button>
+    </div>
+            
+    
+    </section>
+
+
+    <section class="didi">
+        <h1 class="texto">Dashbord dos melhores carros</h1>
+         <div style="max-width: 900px; margin-left: 200px;">
+        <canvas id="myChart"></canvas>
+    </div>
+    </section>
+
+    <section class="secCar">
+        <div>
+            <img src="img/carTruq.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        </div>
+        <div>
+            <span class="text">
+                O Batmóvel é a lenda. Seja a elegância imponente de 1989 ou a ferocidade de 2022, ele é a mais pura extensão da vontade de Bruce Wayne. Uma máquina atemporal, sinônimo de medo para os criminosos de Gotham.
+            </span><br><br>
+
+            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota" onkeyup="nota()">
+        </div>
+        
+    </section>
+    
+    <section class="secCar fundoCar">
+        <div>
+            <span class="text">
+                Este é o Civic G10 da Honda. Conhecido popularmente no mundo esportivo como Batcivic, pelo seu design robusto e sua cor 'All Black'. É a personificação da vigilância urbana, rápido e discreto.
+            </span><br><br>
+            
+            <keyup type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota" style="background-color: #5C5858;" onkeyup="nota()">
+        </div>
+        
+        <div>
+            <img src="img/civicBat.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        </div>
+    </section>
+
+       <section class="secCar">
+        <div>
+            <img src="img/audiR8.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        </div>
+        <div>
+            <span class="text">
+                A Audi R8 reinventada. Um superesportivo com a robustez e o aparato de um veículo tático. Sua silhueta elegante, combinada com a fúria das modificações 'All Black', a torna a caçadora de elite na escuridão de Gotham.
+            </span><br><br>
+
+            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota" onkeyup="nota()">
+        </div>
+        
+    </section>
+
+   <section class="secCar fundoCar">
+        <div>
+            <span class="text">
+                O Tumbler, a máquina que reescreveu as regras. Sua estreia em 'Batman Begins' marcou a mudança: não um carro, mas um tanque blindado com poder militar. Sua lenda continua a dominar a trilogia 'O Cavaleiro das Trevas'.
+            </span><br><br>
+            
+            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota" style="background-color: #5C5858;" oninput="nota()">
+        </div>
+        
+        <div>
+            <img src="img/Car2022.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        </div>
+    </section>
+
 </body>
+<script>
+    var vetor = []
+    function nota() {
+        var nota = Number(iptCar1.value);
+        vetor.push(nota);
+        console.log(vetor)
+    }
+
+
+
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+            datasets: [{
+                label: 'Temperatura Média C°',
+                data: [22, 24, 27, 23, 20, 18],
+                borderWidth: 2,
+                borderColor: 'yellow'
+
+            }, {
+                label: 'Umidade Média',
+                data: [90, 89, 93, 87, 88, 82],
+                borderWidth: 2,
+                borderRadius: 6,
+                borderColor: 'white'
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    })
+    </script>
 </html>
