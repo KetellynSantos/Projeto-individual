@@ -91,6 +91,11 @@ ul {
     border-radius: 32px;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .btnLog {
     background-color: #6D0505;
     color: white;

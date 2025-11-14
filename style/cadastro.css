@@ -75,6 +75,10 @@ ul {
     font-size: 22px;
 }
 
+.cad {
+    color: rgb(133, 148, 161);
+}
+
 .lista:hover{
     color: #6D0505;
 }
