@@ -10,21 +10,25 @@ body {
 
 .inicio_bat {
     background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHpkajkzZ3JrY29uMHdtZzNwcDFlYXZwY25sYjVyOWJuajQ0YWo1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HLIsuOVZewzoNQz0yB/giphy.gif);
-      
-  /* Define o tamanho do fundo para cobrir o elemento 
-  */
-  background-size: cover;
-  /* Impede que a imagem de fundo se repita */
-  background-repeat: no-repeat;
-  /* Centraliza a imagem de fundo */
-  background-position: center;
-  /* Define uma altura para o elemento visível */
-  height: 100vh;
-  width: 100%;
 
-  align-items: flex-end;
-  justify-content: center;
-  align-content: center;
+    /* Define o tamanho do fundo para cobrir o elemento 
+  */
+    background-size: cover;
+    /* Impede que a imagem de fundo se repita */
+    background-repeat: no-repeat;
+    /* Centraliza a imagem de fundo */
+    background-position: center;
+    /* Define uma altura para o elemento visível */
+    height: 100vh;
+    width: 100%;
+
+    /*align-items: flex-end;
+    justify-content: center;
+    */
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .btn-jogo {
@@ -40,10 +44,46 @@ body {
     flex-direction: column;
     width: 20%;
     align-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .texto {
     color: aliceblue;
     font-size: 32px;
-font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-family: "Chakra Petch", sans-serif;
+    padding-top: 55px;
+}
+
+.secCar {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+}
+
+div,
+.didi {
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.fundoCar {
+    background-color: #3A3838;
+}
+
+.text {
+    font-size: 30px;
+    font-weight: 700;
+    color: aliceblue;
+    font-family: "Poppins", sans-serif;
+}
+
+input {
+    background-color: #3A3838;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 25px;
 }
