@@ -3,9 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/batmov.css">
     <title>Document</title>
 </head>
 <body>
-    
+            <div class="quis">
+
+                <h1 class="fa">QUIZ DE <span class="morcego">MORCEGUINHOS</span></h1>
+
+            Em que ano foi lançado o filme The Batman (com Robert Pattinson)?
+            <input type="text" class="iptquiz" id="iptnota">
+            
+            Qual é o nome civil do Batman?
+            <input type="text" class="iptquiz" id="iptnota2">
+
+            Qual é o nome do mordomo e guardião de Bruce Wayne?
+            <input type="text" class="iptquiz" id="iptnota3">
+            
+            Qual ator interpretou o Batman no aclamada trilogia dirigida "O Cavaleiro das Trevas"?
+            <input type="text" class="iptquiz" id="iptnota4">
+            
+            Qual é o nome do asilo de segurança máxima onde o Coringa e outros vilões são aprisionados? 
+            <input type="text" class="iptquiz" id="iptnota5">
+
+            Qual o nome do filho do Batman?
+            <input type="text" class="iptquiz" id="iptnota6">
+            <button onclick="analisar()" class="btnQuiz">Verificar nota</button>
+        </div>
+
+        <div id="img">
+
+            
+
+        </div>
+
+            <!-- <div class="quis">
+
+            Em que ano foi lançado o filme The Batman (com Robert Pattinson)?
+            <input type="text" class="quiz" id="iptnota">
+            
+            Qual é o nome civil do Batman?
+            <input type="text" class="quiz" id="iptnota2">
+
+            Qual é o nome do mordomo e guardião de Bruce Wayne?
+            <input type="text" class="quiz" id="iptnota3">
+            
+            Qual ator interpretou o Batman no aclamada trilogia dirigida "O Cavaleiro das Trevas"?
+            <input type="text" class="quiz" id="iptnota4">
+            
+            Qual é o nome do asilo de segurança máxima onde o Coringa e outros vilões são aprisionados? 
+            <input type="text" class="quiz" id="iptnota5">
+
+            Qual o nome do filho do Batman?
+            <input type="text" class="quiz" id="iptnota6">
+            <button onclick="analisar()">Verificar nota</button>
+        </div> -->
 </body>
+<script>
+       function analisar() {
+        var nota1 = iptnota.value
+        var nota2 = iptnota2.value
+        var nota3 = iptnota3.value
+        var nota4 = iptnota4.value
+        var nota5 = iptnota5.value
+        var nota6 = iptnota6.value
+
+        var pontos = 0
+
+    if(nota1 == 2022) {
+        pontos += 10
+    }
+    
+    if (nota2 == 'Bruce Wayne') {
+        pontos += 10
+    } 
+    
+    if(nota3 == 'Alfred' || nota3 == 'Alfred Pennyworth') {
+        pontos += 10
+    } 
+    
+    if (nota4 == 'Christian Bale' || nota4 == 'Christian') {
+        pontos += 10
+    }
+    
+    if(nota5 == 'Arkham') {
+       pontos += 10
+    }
+    
+    if (nota6 == 'Damian') {
+        pontos += 10
+    }
+
+
+console.log(pontos)
+
+if(pontos == 10 || pontos == 20) {
+    img.innerHTML = `<h3 class = "ponto">Ops! Parece que o cavaleiro das trevas ainda é um misterio para você.<br>Bora Maratonar? <br><button class = "btnMara"><a href="filmes.html" style="text-decoration: none; color: aliceblue; font-family: 'Poppins',sans-serif;">Assistir</a></button></h3>
+    <img src="img/img20.png">`
+} else if (pontos == 30) {
+img.innerHTML = `<img src="img/img30.png">`
+} else if (pontos == 40 || pontos == 50) {
+img.innerHTML = `<img src="img/img40.png">`
+} else {
+img.innerHTML = `<h3 class="ponto">Você teve uma pontuação de ${pontos}</h3>
+<img src="img/img60.png"><br><br>
+Você já pode virar o proximo Robin`
+}
+
+/*
+setTimeout(function() {
+    img.innerHTML = "";
+    iptnota.value = "";
+    iptnota2.value = "";
+    iptnota3.value = "";
+    iptnota4.value = "";
+    iptnota5.value = "";
+    iptnota6.value = "";
+},5000)
+*/
+
+    }
+</script>
 </html>
