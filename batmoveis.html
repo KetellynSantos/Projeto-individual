@@ -33,7 +33,7 @@
     <section class="inicio_bat">
         <div class="bemVindo">
         <span class="texto">Bem-Vindos ao <br> Batmoveis</span>
-        <button class="btn-jogo"<a href="jogo.html" target="_self">Jogar</a></button>
+       <a href="#perso" target="_self"><button class="btn-jogo">Jogar</button></a>
     </div>
             
     
@@ -56,7 +56,7 @@
                 O Batmóvel é a lenda. Seja a elegância imponente de 1989 ou a ferocidade de 2022, ele é a mais pura extensão da vontade de Bruce Wayne. Uma máquina atemporal, sinônimo de medo para os criminosos de Gotham.
             </span><br><br>
 
-            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota" onkeyup="nota()">
+            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"> <button onclick="nota()" class="btnVetor">Enviar</button>
         </div>
         
     </section>
@@ -67,7 +67,8 @@
                 Este é o Civic G10 da Honda. Conhecido popularmente no mundo esportivo como Batcivic, pelo seu design robusto e sua cor 'All Black'. É a personificação da vigilância urbana, rápido e discreto.
             </span><br><br>
             
-            <keyup type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota" style="background-color: #5C5858;" onkeyup="nota()">
+            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota" style="background-color: #5C5858;"> <button onclick="nota()" class="btnVetor">Enviar</button>
+        </div>
         </div>
         
         <div>
@@ -84,7 +85,8 @@
                 A Audi R8 reinventada. Um superesportivo com a robustez e o aparato de um veículo tático. Sua silhueta elegante, combinada com a fúria das modificações 'All Black', a torna a caçadora de elite na escuridão de Gotham.
             </span><br><br>
 
-            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota" onkeyup="nota()">
+            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"> <button onclick="nota()" class="btnVetor">Enviar</button>
+        </div>
         </div>
         
     </section>
@@ -95,7 +97,9 @@
                 O Tumbler, a máquina que reescreveu as regras. Sua estreia em 'Batman Begins' marcou a mudança: não um carro, mas um tanque blindado com poder militar. Sua lenda continua a dominar a trilogia 'O Cavaleiro das Trevas'.
             </span><br><br>
             
-            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota" style="background-color: #5C5858;" oninput="nota()">
+            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota" style="background-color: #5C5858;"> 
+            <button onclick="nota()" class="btnVetor">Enviar</button>
+        </div>
         </div>
         
         <div>
@@ -103,8 +107,117 @@
         </div>
     </section>
 
+    <section id="perso" class="persona">
+   
+
+             <div class="quis">
+
+                <h1 class="fa">QUIZ DE <span class="morcego">MORCEGUINHOS</span></h1>
+
+            Em que ano foi lançado o filme The Batman (com Robert Pattinson)?
+            <input type="text" class="iptquiz" id="iptnota">
+            
+            Qual é o nome civil do Batman?
+            <input type="text" class="iptquiz" id="iptnota2">
+
+            Qual é o nome do mordomo e guardião de Bruce Wayne?
+            <input type="text" class="iptquiz" id="iptnota3">
+            
+            Qual ator interpretou o Batman no aclamada trilogia dirigida "O Cavaleiro das Trevas"?
+            <input type="text" class="iptquiz" id="iptnota4">
+            
+            Qual é o nome do asilo de segurança máxima onde o Coringa e outros vilões são aprisionados? 
+            <input type="text" class="iptquiz" id="iptnota5">
+
+            Qual o nome do filho do Batman?
+            <input type="text" class="iptquiz" id="iptnota6">
+            <button onclick="analisar()" class="btnQuiz">Verificar nota</button>
+        </div>
+
+        <div id="img"></div>
+
+        
+    </section>
+
 </body>
 <script>
+
+    function analisar() {
+        var nota1 = iptnota.value
+        var nota2 = iptnota2.value
+        var nota3 = iptnota3.value
+        var nota4 = iptnota4.value
+        var nota5 = iptnota5.value
+        var nota6 = iptnota6.value
+
+        var pontos = 0
+
+    if(nota1 == 2022) {
+        pontos += 10
+    }
+    
+    if (nota2 == 'Bruce Wayne') {
+        pontos += 10
+    } 
+    
+    if(nota3 == 'Alfred' || nota3 == 'Alfred Pennyworth') {
+        pontos += 10
+    } 
+    
+    if (nota4 == 'Christian Bale' || nota4 == 'Christian') {
+        pontos += 10
+    }
+    
+    if(nota5 == 'Arkham') {
+       pontos += 10
+    }
+    
+    if (nota6 == 'Damian') {
+        pontos += 10
+    }
+
+
+console.log(pontos)
+
+if( iptnota.value == "" ||
+    iptnota2.value == "" ||
+    iptnota3.value == "" ||
+    iptnota4.value == "" ||
+    iptnota5.value == "" ||
+    iptnota6.value == "" ) {
+        alert("Você precisa preencher todos os campos!")
+    } else {
+        if(pontos == 10 || pontos == 20) {
+            img.innerHTML = `<h3 class = "ponto">Ops! Parece que o cavaleiro das trevas ainda é um misterio para você.<br>Bora Maratonar? <br><button class = "btnMara"><a href="filmes.html" style="text-decoration: none; color: aliceblue; font-family: 'Poppins',sans-serif;">Assistir</a></button></h3>
+            <img src="img/img20.png" class = "imgBat">`
+        } else if (pontos == 30) {
+        img.innerHTML = `<h3 class = "ponto">Boa! Com ${pontos} você já ouviu falar. Continue a desvendar os segredos!</h3>
+        <img src="img/img30.png" class = "imgBat">`
+        } else if (pontos == 40 || pontos == 50) {
+        img.innerHTML = `<h3 class = "ponto">Excelente! Com ${pontos} Batman já faz parte da sua vida!</h3>
+        <img src="img/img40.png" class = "imgBat">`
+        } else {
+        img.innerHTML = `<h3 class = "ponto"></h3>
+        <h3 class="ponto">Você teve a pontuação total de ${pontos}!! <br> Você já pode virar o proximo Robin :)</h3>
+        <img src="img/img60.png" class = "imgBat"><br><br>`
+        
+        }
+    }
+
+
+setTimeout(function() {
+    img.innerHTML = "";
+    iptnota.value = "";
+    iptnota2.value = "";
+    iptnota3.value = "";
+    iptnota4.value = "";
+    iptnota5.value = "";
+    iptnota6.value = "";
+},10000)
+
+
+    }
+
     var vetor = []
     function nota() {
         var nota = Number(iptCar1.value);
