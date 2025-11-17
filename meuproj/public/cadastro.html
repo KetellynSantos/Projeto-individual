@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+         <link rel="shortcut icon" href="assets/logo/batmanLogo (2).png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/cadastro.css">
+    <title>KittyWay | Cadastro</title>
+</head>
+<body>
+
+        <header class="inicio">
+        <ul>
+            <a href="index.html"><img src="assets/logo/batLogCop.png" alt="logo" class="lista"></a>
+            <li><a href="index.html" class="lista">Home</a></li>
+            <li><a href="batmoveis.html" class="lista">Batmoveis</a></li>
+            <li><a href="filmes.html" class="lista">Filmes</a></li>
+            <li><a href="login.html" class="log">Login</a></li>
+        </ul>
+      </header>
+
+      <div class="login">
+    <div class="alerta_erro">
+      <div class="card_erro" id="cardErro">
+        <span id="mensagem_erro"></span>
+      </div>
+    </div>
+
+ <div class="main-content">
+     <div class="mod">
+    <h1 class="titulo">Cadastro</h1>
+
+    <input type="text" class="entrada" id="nome_input" placeholder="Nome completo">
+    <input type="text" class="entrada" id="apelido_input" placeholder="Apelido">
+    <input type="password" class="entrada" id="senha_input" placeholder="Senha">
+     <input id="confirmacao_senha_input" class="entrada" type="password" placeholder="Confirmação de Senha" />
+
+    <button class="btnCad" onclick="cadastrar()">Cadastrar</button>
+<!--
+    <div id="div_aguardar" class="loading-div">
+          <img src="../gifs/circle-loading.gif" id="loading-gif" />
+        </div>
+
+        <div id="div_erros_login"></div>
+        -->
+ </div>
+  </div>
+</body>
+<script src="../js/cadastro.js"></script>
+</html>

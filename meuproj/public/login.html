@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KittyWay | Login</title>
+
+    <script src="./js/sessao.js"></script>
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="icon" href="assets/logo/batmanLogo (2).png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+
+<body >
+
+     <header class="inicio">
+        <ul>
+            <a href="index.html"><img src="assets/logo/batLogCop.png" alt="" class="lista"></a>
+            <li><a href="index.html" class="lista">Home</a></li>
+            <li><a href="batmoveis.html"  class="lista">Batmoveis</a></li>
+            <li><a href="filmes.html" class="lista">Filmes</a></li>
+            <li><a href="login.html" class="log">Login</a></li>
+        </ul>
+    </header>
+
+     <div class="login">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+        <div class="main">
+        <div class="acesso">
+            <h1>Login</h1>
+
+            <input type="text" class="login" id="apelido_input" placeholder="Apelido">
+            <input type="password" class="login" id="senha_input" placeholder="Senha">
+
+            <button class="btnLog" onclick="entrar()">Entrar</button>
+
+            <p class="cad">Não tenho  cadastro?  <a href="cadastro.html">Cadastrar</a></p>
+        </div>
+    </div>
+    <!--
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login"></div>-->
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="../js/login.js">
+</script>
+
+<!--
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo/batmanLogo (2).png" type="image/x-icon">
+         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/login.css">
+    <title>KittyWay | Login</title>
+</head>
+<body>
+     <header class="inicio">
+        <ul>
+            <a href="index.html"><img src="logo/batLogCop.png" alt="" class="lista"></a>
+            <li><a href="index.html" class="lista">Home</a></li>
+            <li><a href="batmoveis.html" class="lista">Batmoveis</a></li>
+            <li><a href="filmes.html" class="lista">Filmes</a></li>
+            <li><a href="login.html" class="log">Login</a></li>
+        </ul>
+    </header>
+
+    <div class="main">
+        <div class="acesso">
+            <h1>Login</h1>
+
+            <input type="text" class="login" placeholder="Apelido">
+            <input type="text" class="login" placeholder="Senha">
+
+            <button class="btnLog">Entrar</button>
+
+            <p class="cad">Não tenho  cadastro?  <a href="cadastro.html">Cadastrar</a></p>
+        </div>
+    </div>
+</body>
+</html>
+-->

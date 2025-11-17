@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/logo/batmanLogo (2).png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/batmov.css">
+    <title>Quiz Batmoveis | KittyWay</title>
+</head>
+
+<body>
+    <header class="inicio">
+        <ul>
+            <a href="index.html"><img src="assets/logo/batLogCop.png" alt="" class="lista"></a>
+            <li><a href="index.html" class="lista">Home</a></li>
+            <li><a href="batmoveis.html" class="lista">Batmoveis</a></li>
+            <li><a href="filmes.html" class="lista">Filmes</a></li>
+            <li><a href="login.html" class="log">Login</a></li>
+        </ul>
+    </header>
+
+    <section class="inicio_bat">
+        <div class="bemVindo">
+            <span class="texto">Bem-Vindos ao <br> Batmoveis</span>
+            <a href="#perso" target="_self"><button class="btn-jogo">Jogar</button></a>
+        </div>
+
+
+    </section>
+
+
+    <section class="didi">
+        <h1 class="texto">Dashbord dos melhores carros</h1>
+        <div style="max-width: 900px; margin-left: 200px;">
+            <canvas id="myChart"></canvas>
+        </div>
+    </section>
+
+    <section class="secCar">
+        <div>
+            <img src="assets/img/carTruq.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        </div>
+        <div>
+            <span class="text">
+                O Batmóvel é a lenda. Seja a elegância imponente de 1989 ou a ferocidade de 2022, ele é a mais pura
+                extensão da vontade de Bruce Wayne. Uma máquina atemporal, sinônimo de medo para os criminosos de
+                Gotham.
+            </span><br><br>
+
+            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"> <button onclick="nota()"
+                class="btnVetor">Enviar</button>
+        </div>
+
+    </section>
+
+    <section class="secCar fundoCar">
+        <div>
+            <span class="text">
+                Este é o Civic G10 da Honda. Conhecido popularmente no mundo esportivo como Batcivic, pelo seu design
+                robusto e sua cor 'All Black'. É a personificação da vigilância urbana, rápido e discreto.
+            </span><br><br>
+
+            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"
+                style="background-color: #5C5858;"> <button onclick="nota()" class="btnVetor">Enviar</button>
+        </div>
+        </div>
+
+        <div>
+            <img src="assets/img/civicBat.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        </div>
+    </section>
+
+    <section class="secCar">
+        <div>
+            <img src="assets/img/audiR8.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        </div>
+        <div>
+            <span class="text">
+                A Audi R8 reinventada. Um superesportivo com a robustez e o aparato de um veículo tático. Sua silhueta
+                elegante, combinada com a fúria das modificações 'All Black', a torna a caçadora de elite na escuridão
+                de Gotham.
+            </span><br><br>
+
+            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"> <button onclick="nota()"
+                class="btnVetor">Enviar</button>
+        </div>
+        </div>
+
+    </section>
+
+    <section class="secCar fundoCar">
+        <div>
+            <span class="text">
+                O Tumbler, a máquina que reescreveu as regras. Sua estreia em 'Batman Begins' marcou a mudança: não um
+                carro, mas um tanque blindado com poder militar. Sua lenda continua a dominar a trilogia 'O Cavaleiro
+                das Trevas'.
+            </span><br><br>
+
+            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"
+                style="background-color: #5C5858;">
+            <button onclick="nota()" class="btnVetor">Enviar</button>
+        </div>
+        </div>
+
+        <div>
+            <img src="assets/img/Car2022.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        </div>
+    </section>
+
+    <section id="perso" class="persona">
+
+        <div class="quis">
+
+            <h1 class="fa">QUIZ DE <span class="morcego">MORCEGUINHOS</span></h1>
+
+            Em que ano foi lançado o filme The Batman (com Robert Pattinson)?
+            <select class="selec" id="iptnota">
+                <option value="0">Selecionar</option>
+                <option value="1">2022</option>
+                <option value="2">2023</option>
+                <option value="3">2021</option>
+            </select>
+
+
+            Qual é o nome civil do Batman?
+            <select class="selec" id="iptnota2">
+                 <option value="0">Selecionar</option>
+                <option value="1">Bruce Wayne</option>
+                <option value="2">Bruno Walter</option>
+                <option value="3">Zeze di Camargo</option>
+            </select>
+
+            Qual é o nome do mordomo e guardião de Bruce Wayne?
+            <select class="selec" id="iptnota3">
+                <option value="0">Selecionar</option>
+                <option value="1">Alfred Pennyworth</option>
+                <option value="2">Alfred Parker</option>
+                <option value="3">Marcão</option>
+            </select>
+
+            Qual ator interpretou o Batman no aclamada trilogia dirigida "O Cavaleiro das Trevas"?
+            <select class="selec" id="iptnota4">
+                 <option value="0">Selecionar</option>
+                <option value="1">Chris Browm</option>
+                <option value="2">Christian Bale</option>
+                <option value="3">Luan Santana</option>
+            </select>
+
+            Qual é o nome do asilo de segurança máxima onde o Coringa e outros vilões são aprisionados?
+            <select class="selec" id="iptnota5">
+                 <option value="0">Selecionar</option>
+                <option value="1">Caps</option>
+                <option value="2">Arkham</option>
+                <option value="3">Arkham Gotham</option>
+            </select>
+
+            Qual o nome do filho do Batman?
+            <select class="selec" id="iptnota6">
+                <option value="0">Selecionar</option>
+                <option value="1">Damian</option>
+                <option value="2">Daniel</option>
+                <option value="3">Dannis</option>
+            </select>
+
+            <button onclick="enviarPontuacaoParaAPI()" class="btnQuiz">Verificar nota</button>
+        </div>
+
+        <div id="img"></div>
+
+
+    </section>
+
+</body>
+<script>
+
+    function enviarPontuacaoParaAPI() {
+        var nota1 = Number(iptnota.value)
+        var nota2 = Number(iptnota2.value)
+        var nota3 = Number(iptnota3.value)
+        var nota4 = Number(iptnota4.value)
+        var nota5 = Number(iptnota5.value)
+        var nota6 = Number(iptnota6.value)
+
+        var pontos = 0
+
+        if (nota1 == 1) {
+            pontos += 10
+        }
+
+        if (nota2 == 1) {
+            pontos += 10
+        }
+
+        if (nota3 == 1) {
+            pontos += 10
+        }
+
+        if (nota4 == 2) {
+            pontos += 10
+        }
+
+        if (nota5 == 2) {
+            pontos += 10
+        }
+
+        if (nota6 == 1) {
+            pontos += 10
+        }
+
+
+        console.log(pontos)
+
+        if (
+            nota1 == 0 ||
+            nota2 == 0 ||
+            nota3 == 0 ||
+            nota4 == 0 ||
+            nota5 == 0 ||
+            nota6 == 0) {
+            alert("Você precisa preencher todos os campos!")
+            return;
+        }
+
+        const idUsuario = sessionStorage.ID_USUARIO;
+
+        if (idUsuario == undefined) {
+            alert("Erro: Você não está logado! Faça o login para registrar sua pontuação");
+            return;
+        }
+
+        fetch("/medidas/registrar-pontuacao", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idUsuario: idUsuario,
+                pontos: pontos
+            })
+        })
+            .then(function (reposta) {
+                console.log("Resposta da API de registros:", resposta);
+
+                if (resposta.ok) {
+                    console.log("Resposta da API de registro:", resposta);
+                } else {
+                    console.error("Houve um erro ao tentar registrar a pontuação!");
+                    resposta.text().then(texto => console.error(texto));
+                }
+            }).catch(function (erro) {
+                console.log(erro);
+            });
+
+        if (pontos == 10 || pontos == 20) {
+            img.innerHTML = `<h3 class = "ponto">Ops! Parece que o cavaleiro das trevas ainda é um misterio para você.<br>Bora Maratonar? <br><button class = "btnMara"><a href="filmes.html" style="text-decoration: none; color: aliceblue; font-family: 'Poppins',sans-serif;">Assistir</a></button></h3>
+            <img src="assets/img/img20.png" class = "imgBat">`
+        } else if (pontos == 30) {
+            img.innerHTML = `<h3 class = "ponto">Boa! Com ${pontos} você já ouviu falar. Continue a desvendar os segredos!</h3>
+        <img src="assets/img/img30.png" class = "imgBat">`
+        } else if (pontos == 40 || pontos == 50) {
+            img.innerHTML = `<h3 class = "ponto">Excelente! Com ${pontos} Batman já faz parte da sua vida!</h3>
+        <img src="assets/img/img40.png" class = "imgBat">`
+        } else {
+            img.innerHTML = `<h3 class = "ponto"></h3>
+        <h3 class="ponto">Você teve a pontuação total de ${pontos}!! <br> Você já pode virar o proximo Robin :)</h3>
+        <img src="assets/img/img60.png" class = "imgBat"><br><br>`
+        }
+
+
+
+        setTimeout(function () {
+            img.innerHTML = "";
+            iptnota.value = "";
+            iptnota2.value = "";
+            iptnota3.value = "";
+            iptnota4.value = "";
+            iptnota5.value = "";
+            iptnota6.value = "";
+        }, 10000)
+
+    }
+
+    function atualizarGraficoEstatisticas() {
+        console.log("Buscando estatísticas globais do quiz...");
+
+        fetch("/medidas/estatisticas-quiz", {
+            method: "GET",
+        })
+            .then(function (resposta) {
+                if (!resposta.ok) {
+                    console.error("Houve um erro na API ao buscar estatísticas!");
+                    return resposta.text().then(texto => { throw new Error(texto); });
+                }
+
+                return resposta.json();
+            })
+            .then(function (json) {
+                console.log("Dados do quiz: ", json);
+
+                const dadosQuiz = json;
+
+                const acertosTotais = dadosQuiz.acertos_totais || 0;
+                const acertosAltos = dadosQuiz.acertos_altos || 0;
+                const acertosBaixos = dadosQuiz.acertos_baixos || 0;
+                const totalJogadores = dadosQuiz.total_jogadores || 0;
+
+                const ctx = document.getElementById('myChart');
+
+                if (window.quizChart instanceof Chart) {
+                    window.quizChart.destroy();
+                }
+
+                window.quizChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Pontuação Máxima (60/60)', 'Acertos Alto (40-50)', 'Acertos Baixos (20-30)', 'Total Jogadores'],
+                        datasets: [{
+                            label: 'Números de Jogadores',
+                            data: [acertosTotais, acertosAltos, acertosBaixos, totalJogadores],
+                            backgroundColor: [
+                                'rgba(183, 236, 37, 0.64)',
+                                'rgba(255, 159, 64, 0.6)',
+                                'rgba(255,99,132,0.6)',
+                                'rgba(54,162,235,0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(179, 190, 12, 1)',
+                                'rgba(255,159,64,1)',
+                                'rgba(255,99,132,1)',
+                                'rgba(54,162,235,1)'
+                            ],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Contagem de Usuários'
+                                }
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(function (erro) {
+                console.error("Erro de conexão ao buscar estatísticas", erro);
+            });
+    }
+
+    window.onload = atualizarGraficoEstatisticas;
+
+</script>

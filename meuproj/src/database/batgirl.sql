@@ -1,20 +1,32 @@
 CREATE DATABASE batgirl;
 use batgirl;
 
+
 show tables;
 
 create table usuario (
-    idUser INT PRIMARY KEY AUTO_INCREMENT,
+    idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50),
-    dtNasc DATE,
     apelido VARCHAR(25),
     senha VARCHAR(50)
 );
 
-INSERT INTO usuario (nome, dtNasc, apelido, senha) VALUES
-('Kitty Keisuke','2006-08-11','Kitty','keke1020'),
-('Matheus Menino','2007-04-27','Boneca','theus123');
+SELECT * from usuario;
 
+INSERT INTO usuario (nome, apelido, senha) VALUES
+('Kitty Keisuke','Kitty','keke1020'),
+('Matheus Menino','Boneca','theus123');
+
+CREATE TABLE pontuacao (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	pontos INT NOT NULL,
+	momento DATETIME DEFAULT CURRENT_TIMESTAMP,
+	fk_usuario INT,
+	FOREIGN KEY (fk_usuario) REFERENCES usuario(idUsuario)
+);
+
+
+/*
 CREATE TABLE carros (
     idCarro INT PRIMARY KEY AUTO_INCREMENT,
     nota INT,
@@ -59,3 +71,4 @@ ALTER TABLE carros ADD COLUMN fkUser INT;
 ALTER Table carros ADD constraint fkUser FOREIGN KEY (fkUser) REFERENCES usuario(idUser);
 
 desc carros;
+*/

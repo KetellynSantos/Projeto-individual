@@ -6,7 +6,7 @@
 
 body {
     height: 100vh;
-    background-image: url('../img/imgCad.jpg');
+    background-image: url('../assets/img/imgCad.jpg');
    display: block;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
- margin-top: 5%;
+    margin-top: 5%;
 }
 
 .mod {
@@ -31,6 +31,7 @@ body {
     width: 30%;
     padding: 35px;
     gap: 15px;
+    margin-top: 10%;
 }
 
 .inicio {
