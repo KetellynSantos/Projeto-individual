@@ -4,17 +4,18 @@
     z-index: 9999;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #3b3b3b8f;
+    /*background-color: #3b3b3b8f;*/
     padding: 10px;
     border-radius: 50px;
-    width: auto;
-    max-width: 90%;
+    /*width: 5%;*/
+    /*max-width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+    /*
     margin-top: 0;
     margin-left: 0;
-    margin-right: 0;
+    margin-right: 0;*/
 }
 
 ul {
