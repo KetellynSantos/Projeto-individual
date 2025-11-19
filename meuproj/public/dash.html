@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="assets/logo/batmanLogo (2).png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style/dash.css">
+    <link rel="stylesheet" href="style/header.css">
+    <title>KittyWay | Dashboard</title>
+    
+</head>
+
+<body>
+
+ <header class="inicio">
+        <ul>
+            <a href="index.html"><img src="assets/logo/batLogCop.png" alt="" class="lista"></a>
+            <li><a href="index.html" class="lista">Home</a></li>
+            <li><a href="batmoveis.html" class="lista">Batmoveis</a></li>
+            <li><a href="dash.html"  class="lista">Dashboard</a></li>
+            <li><a href="filmes.html" class="lista">Filmes</a></li>
+            <!--<li><a href="login.html" class="log">Login</a></li>-->
+        </ul>
+    </header>
+
+    <h1>Dashboard do Quiz</h1>
+    <div style="max-width: 900px; margin-left: 200px;">
+            <canvas id="myChart"></canvas>
+        </div>
+</body>
+<script>
+     function atualizarGraficoEstatisticas() {
+        console.log("Buscando estatísticas globais do quiz...");
+
+        fetch("/pontos/estatisticas-quiz", {
+            method: "GET",
+        })
+            .then(function (resposta) {
+                if (!resposta.ok) {
+                    console.error("Houve um erro na API ao buscar estatísticas!");
+                    return resposta.text().then(texto => { throw new Error(texto); });
+                }
+
+                return resposta.json();
+            })
+            .then(function (json) {
+                console.log("Dados do quiz: ", json);
+
+                const dadosQuiz = json;
+
+                const acertosTotais = dadosQuiz.acertos_totais || 0;
+                const acertosAltos = dadosQuiz.acertos_altos || 0;
+                const acertosBaixos = dadosQuiz.acertos_baixos || 0;
+                const totalJogadores = dadosQuiz.total_jogadores || 0;
+
+                const ctx = document.getElementById('myChart');
+/*
+                if (window.quizChart instanceof Chart) {
+                    window.quizChart.destroy();
+                }
+
+                window.quizChart =*/
+                 new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Pontuação Máxima (60/60)', 'Acertos Alto (40-50)', 'Acertos Baixos (20-30)', 'Total Jogadores'],
+                        datasets: [{
+                            label: `Números de jogadores: ${totalJogadores}`,
+                            data: [acertosTotais, acertosAltos, acertosBaixos, totalJogadores],
+                            backgroundColor: [
+                                'rgba(183, 236, 37, 0.64)',
+                                'rgba(255, 159, 64, 0.6)',
+                                'rgba(255,99,132,0.6)',
+                                'rgba(54,162,235,0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(179, 190, 12, 1)',
+                                'rgba(255,159,64,1)',
+                                'rgba(255,99,132,1)',
+                                'rgba(54,162,235,1)'
+                            ],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Contagem de Usuários'
+                                }
+                            }
+                        }
+                    }
+                });
+            })
+            .catch(function (erro) {
+                console.error("Erro de conexão ao buscar estatísticas", erro);
+            });
+    }
+
+    window.onload = atualizarGraficoEstatisticas;
+</script>
+</html>
