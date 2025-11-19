@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    font-family: "Chakra Petch", sans-serif;
+    color: aliceblue;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 70px;
+}
