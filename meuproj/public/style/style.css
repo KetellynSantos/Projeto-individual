@@ -18,12 +18,18 @@ body {
     justify-content: center;
 }
 
+.styBtn {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
 .prisecao {
     display: flex;
-        text-align: center;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    margin-top: 62px;
+    margin: 50px;
     gap: 55px;
 }
 
@@ -46,8 +52,10 @@ p {
 
 .btn-log, .btn-cad {
     color: white;
-        font-family: "Poppins", sans-serif;
-        font-size: 28px;
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    border-radius: 28px;
+    padding: 10px 25px;
        
 }
 
@@ -65,16 +73,12 @@ p {
 .btn-log {
     border: #6D0505 solid 2px;
     background-color: black;
-    border-radius: 28px;
-    padding: 4px 55px;
 }
 
 .btn-cad {
     background-color: #6D0505;
     border: 0px;
     color: white;
-    padding: 6px 20px;
-    border-radius: 32px;
 }
 
 .tagCad {
@@ -197,7 +201,7 @@ a {
 }
 
 a:hover {
-    color: #111010;
+    color: #b39e9e;
 }
 
 .contato {
