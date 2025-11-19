@@ -28,9 +28,9 @@
         <ul>
             <a href="index.html"><img src="assets/logo/batLogCop.png" alt="" class="lista"></a>
             <li><a href="index.html" class="lista">Home</a></li>
-            <li><a href="batmoveis.html" class="lista">Batmoveis</a></li>
+            <li><a href="dash.html"  class="lista">Dashboard</a></li>
             <li><a href="filmes.html" class="lista">Filmes</a></li>
-            <li><a href="login.html" class="log">Login</a></li>
+            <!--<li><a href="login.html" class="log">Login</a></li>-->
         </ul>
     </header>
 
@@ -46,9 +46,12 @@
 
     <section class="didi">
         <h1 class="texto">Dashbord dos melhores carros</h1>
+        <!--
         <div style="max-width: 900px; margin-left: 200px;">
             <canvas id="myChart"></canvas>
-        </div>
+        </div> 
+        -->
+
     </section>
 
     <section class="secCar">
@@ -243,7 +246,7 @@
             return;
         }
 
-        fetch("/medidas/registrar-pontuacao", {
+        fetch("/pontos/registrar-pontuacao", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -270,7 +273,7 @@
             img.innerHTML = `<h3 class = "ponto">Ops! Parece que o cavaleiro das trevas ainda é um misterio para você.<br>Bora Maratonar? <br><button class = "btnMara"><a href="filmes.html" style="text-decoration: none; color: aliceblue; font-family: 'Poppins',sans-serif;">Assistir</a></button></h3>
             <img src="assets/img/img20.png" class = "imgBat">`
         } else if (pontos == 30) {
-            img.innerHTML = `<h3 class = "ponto">Boa! Com ${pontos} você já ouviu falar. Continue a desvendar os segredos!</h3>
+            img.innerHTML = `<h3 class = "ponto">Boa! Com ${pontos} você já ouviu falar. <br> Continue a desvendar os segredos!</h3>
         <img src="assets/img/img30.png" class = "imgBat">`
         } else if (pontos == 40 || pontos == 50) {
             img.innerHTML = `<h3 class = "ponto">Excelente! Com ${pontos} Batman já faz parte da sua vida!</h3>
@@ -291,14 +294,15 @@
             iptnota4.value = "";
             iptnota5.value = "";
             iptnota6.value = "";
-        }, 10000)
+
+        }, 5000)
 
     }
-
+/*
     function atualizarGraficoEstatisticas() {
         console.log("Buscando estatísticas globais do quiz...");
 
-        fetch("/medidas/estatisticas-quiz", {
+        fetch("/pontos/estatisticas-quiz", {
             method: "GET",
         })
             .then(function (resposta) {
@@ -320,17 +324,20 @@
                 const totalJogadores = dadosQuiz.total_jogadores || 0;
 
                 const ctx = document.getElementById('myChart');
-
+/*
                 if (window.quizChart instanceof Chart) {
                     window.quizChart.destroy();
                 }
 
-                window.quizChart = new Chart(ctx, {
+                window.quizChart = -- comentario para aqui
+
+
+                 new Chart(ctx, {
                     type: 'bar',
                     data: {
                         labels: ['Pontuação Máxima (60/60)', 'Acertos Alto (40-50)', 'Acertos Baixos (20-30)', 'Total Jogadores'],
                         datasets: [{
-                            label: 'Números de Jogadores',
+                            label: `Números de jogadores: ${totalJogadores}`,
                             data: [acertosTotais, acertosAltos, acertosBaixos, totalJogadores],
                             backgroundColor: [
                                 'rgba(183, 236, 37, 0.64)',
@@ -367,5 +374,6 @@
     }
 
     window.onload = atualizarGraficoEstatisticas;
+    */
 
 </script>
