@@ -18,8 +18,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <link rel="stylesheet" href="../style/header.css">
-    <link rel="stylesheet" href="../style/batmov.css">
+    <link rel="stylesheet" href="../public/style/header.css">
+    <link rel="stylesheet" href="../public/style/batmov.css">
     <title>Quiz Batmoveis | KittyWay</title>
 </head>
 
@@ -29,8 +29,10 @@
             <a href="index.html"><img src="assets/logo/batLogCop.png" alt="" class="lista"></a>
             <li><a href="index.html" class="lista">Home</a></li>
             <li><a href="dash.html"  class="lista">Dashboard</a></li>
+            <li><a href="batmoveis.html"  class="lista">Batmoveis</a></li>
             <li><a href="filmes.html" class="lista">Filmes</a></li>
-            <!--<li><a href="login.html" class="log">Login</a></li>-->
+            <li><a href="filmes.html" class="lista">|</a></li>
+            <li><a href="sobremim.html" class="log">Sobre mim</a></li>
         </ul>
     </header>
 
@@ -43,16 +45,14 @@
 
     </section>
 
-
+<!--
     <section class="didi">
         <h1 class="texto">Dashbord dos melhores carros</h1>
-        <!--
+        
         <div style="max-width: 900px; margin-left: 200px;">
             <canvas id="myChart"></canvas>
         </div> 
-        -->
-
-    </section>
+    </section>  -->
 
     <section class="secCar">
         <div>
@@ -65,9 +65,9 @@
                 Gotham.
             </span><br><br>
 
-            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"> <button onclick="nota()"
+          <!--  <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"> <button onclick="nota()"
                 class="btnVetor">Enviar</button>
-        </div>
+        </div>--> 
 
     </section>
 
@@ -78,8 +78,9 @@
                 robusto e sua cor 'All Black'. É a personificação da vigilância urbana, rápido e discreto.
             </span><br><br>
 
-            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"
-                style="background-color: #5C5858;"> <button onclick="nota()" class="btnVetor">Enviar</button>
+                <!--<input type="number" id="iptCar4" class="iptCars" placeholder="Digite uma nota"
+                style="background-color: #5C5858;">
+            <button onclick="nota()" class="btnVetor">Enviar</button>-->
         </div>
         </div>
 
@@ -99,8 +100,9 @@
                 de Gotham.
             </span><br><br>
 
-            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"> <button onclick="nota()"
+              <!--  <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"> <button onclick="nota()"
                 class="btnVetor">Enviar</button>
+        </div>--> 
         </div>
         </div>
 
@@ -114,15 +116,24 @@
                 das Trevas'.
             </span><br><br>
 
-            <input type="number" id="iptCar1" class="iptCars" placeholder="Digite uma nota"
+            <!--<input type="number" id="iptCar4" class="iptCars" placeholder="Digite uma nota"
                 style="background-color: #5C5858;">
-            <button onclick="nota()" class="btnVetor">Enviar</button>
+            <button onclick="nota()" class="btnVetor">Enviar</button>-->
         </div>
         </div>
 
         <div>
             <img src="assets/img/Car2022.png" alt="Carro de tanque" style="width: 500px; height: auto;">
         </div>
+    </section>
+
+    <section class="carAlea">
+        <div class="card-car">
+            <h3 class="txt">Descubra seu <span>Batmovel</span> atraves da sua idade!</h3>
+            <input type="number" id="iptIdade" placeholder="Digite sua idade" class="iptId"><br>
+            <button onclick="idCarro()" class="btn-jogo btn-ver">Verificar</button>
+        </div>
+        <div id="msg"></div>
     </section>
 
     <section id="perso" class="persona">
@@ -184,7 +195,6 @@
         </div>
 
         <div id="img"></div>
-
 
     </section>
 
@@ -374,6 +384,62 @@
     }
 
     window.onload = atualizarGraficoEstatisticas;
-    */
+    
 
+    var nota1 = []
+    var nota2 = []
+    var nota3 = []
+    var nota4 = []
+    function nota() {
+        var car1 = Number(iptCar1.value);
+        var car2 = Number(iptCar2.value);
+        var car3 = Number(iptCar3.value);
+        var car4 = Number(iptCar4.value);
+
+        var soma = 0;
+
+        nota1.push(car1);
+        nota2.push(car2);
+        nota3.push(car3);
+        nota4.push(car4);
+
+        console.log(nota1)
+        console.log(nota2)
+        console.log(nota3)
+        console.log(nota4)
+
+        for(var i = 0; i < nota1.length; i++) {
+            soma = nota1 + nota2 + nota3 + nota4
+
+            console.log(`A nota total dos carro é: ${soma}`)
+        }
+       
+    }
+*/
+
+function idCarro() {
+    var idadeCarro = Number(iptIdade.value)
+    var ax_math = (Math.random() * 3 + 1).toFixed(0)
+    var imagem = ""
+/*
+    if(idadeCarro <= 17) {
+        msg.innerHTML = `Infelizmente você é de menor e não tem habilitação para dirigir meus Batmóveis...<br><br> 
+        <img src="https://i.pinimg.com/1200x/7f/f1/2c/7ff12c1595db318d96df0791f467613b.jpg" alt="Batman triste" style="width: 150px; height: 150px;">
+`
+    }else if(ax_math == 1) {
+        imagem.innerHTML = `<img src="assets/img/Car2022.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+`
+    }else if(ax_math == 2) {
+        imagem.innerHTML = `<img src="assets/img/Car2022.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+`
+    }else if(ax_math == 3) {
+        imagem.innerHTML = `<img src="assets/img/Car2022.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+`
+    }else if(ax_math == 4) {
+        imagem.innerHTML = `<img src="assets/img/Car2022.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+`
+    }*/
+
+    console.log("<br>" + ax_math)
+}
 </script>
