@@ -43,7 +43,7 @@ body {
 
 .btn-Assistir {
     border: solid 2px #6D0505;
-    background-color: #141414;
+    background-color: #1414146c;
     border-radius: 50px;
     width: 50%;
     padding: 10px;
@@ -67,6 +67,7 @@ a {
 .divEntrada {
     display: flex;
     flex-direction: column;
+    margin-top: -800px;
 }
 
 .filmes {

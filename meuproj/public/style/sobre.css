@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0;
+
+}
+
+body {
+    background-color: rgb(31, 30, 30);
+}
+
+.tela-Inicio {
+   background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnh5OTVpZzVxaGVobnNmMnlsYjdzNzlhZGNyZTA2Y3VkenRmaGNxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oMLJaPmbUnoC4/giphy.gif); 
+      background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    align-content: center;
+}
+
+.text-inicio {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(240, 248, 255, 0.562);
+    font-size: 24px;
+    font-family: "Poppins",sans-serif;
+}
+
+.sec-card {
+    display: flex;
+    padding: 25px 40px;
+    gap: 15px;
+}
+
+#card-sobre {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 32px;
+    border: 3px solid rgba(134, 21, 21, 0.678);
+    color: aliceblue;
+    font-size: 24px;
+    font-family: "Poppins",sans-serif;
+    padding: 55px 50px;
+    text-align: center;
+}
+
+.kitBatman {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 24px;
+    font-family: "Poppins",sans-serif;
+    padding: 55px;
+}
+
+.img-eu {
+    border-radius: 100%;
+}
