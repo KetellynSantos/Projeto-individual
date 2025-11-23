@@ -15,6 +15,26 @@ body {
     background-repeat: no-repeat;
 }
 
+.alert_erro {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.card_erro {
+    display: none;
+    background-color: #ff4d4dc0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: "Poppins",sans-serif;
+    text-align: center;
+    width: 80%;
+    max-width: 350px;
+}
+
 .main-content {
     display: flex;
     justify-content: center;

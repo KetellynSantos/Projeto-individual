@@ -10,15 +10,9 @@ body {
 
 .inicio_bat {
     background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHpkajkzZ3JrY29uMHdtZzNwcDFlYXZwY25sYjVyOWJuajQ0YWo1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HLIsuOVZewzoNQz0yB/giphy.gif);
-
-    /* Define o tamanho do fundo para cobrir o elemento 
-  */
     background-size: cover;
-    /* Impede que a imagem de fundo se repita */
     background-repeat: no-repeat;
-    /* Centraliza a imagem de fundo */
     background-position: center;
-    /* Define uma altura para o elemento visível */
     height: 100vh;
     width: 100%;
 
@@ -198,11 +192,11 @@ input {
 }
 
 .carAlea {
-   height: 50vh;
+   height: 142vh;
 }
 
 .txt {
-       color: aliceblue;
+    color: aliceblue;
     font-size: 24px;
     font-weight: 600;
     font-family: "Chakra Petch", sans-serif;
@@ -220,6 +214,7 @@ input {
 
 .card-car {
     background-color: #dedede81;
+    border: 4px solid #691616;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -229,4 +224,22 @@ input {
     margin-right: auto;
     margin-top: 50px;
     border-radius: 32px;
+}
+
+.img-carrosAle {
+    width: 500px; 
+    height: auto;
+}
+
+.div-img {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.txtAletorio {
+    font-size: 32px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    color: aliceblue;
 }

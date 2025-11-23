@@ -18,8 +18,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <link rel="stylesheet" href="../public/style/header.css">
-    <link rel="stylesheet" href="../public/style/batmov.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/batmov.css">
     <title>Quiz Batmoveis | KittyWay</title>
 </head>
 
@@ -133,7 +133,7 @@
             <input type="number" id="iptIdade" placeholder="Digite sua idade" class="iptId"><br>
             <button onclick="idCarro()" class="btn-jogo btn-ver">Verificar</button>
         </div>
-        <div id="msg"></div>
+        <div id="imagem" class="div-img"></div>
     </section>
 
     <section id="perso" class="persona">
@@ -213,26 +213,44 @@
 
         if (nota1 == 1) {
             pontos += 10
+            iptnota.style.backgroundColor = 'lightgreen';
+        } else {
+            iptnota.style.backgroundColor = 'lightcoral';
         }
 
         if (nota2 == 1) {
             pontos += 10
+             iptnota2.style.backgroundColor = 'lightgreen';
+        } else {
+            iptnota2.style.backgroundColor = 'lightcoral';
         }
 
         if (nota3 == 1) {
             pontos += 10
+             iptnota3.style.backgroundColor = 'lightgreen';
+        } else {
+            iptnota3.style.backgroundColor = 'lightcoral';
         }
 
         if (nota4 == 2) {
             pontos += 10
+             iptnota4.style.backgroundColor = 'lightgreen';
+        } else {
+            iptnota4.style.backgroundColor = 'lightcoral';
         }
 
         if (nota5 == 2) {
             pontos += 10
+             iptnota5.style.backgroundColor = 'lightgreen';
+        } else {
+            iptnota5.style.backgroundColor = 'lightcoral';
         }
 
         if (nota6 == 1) {
             pontos += 10
+             iptnota6.style.backgroundColor = 'lightgreen';
+        } else {
+            iptnota6.style.backgroundColor = 'lightcoral';
         }
 
 
@@ -279,166 +297,64 @@
                 console.log(erro);
             });
 
-        if (pontos == 10 || pontos == 20) {
-            img.innerHTML = `<h3 class = "ponto">Ops! Parece que o cavaleiro das trevas ainda é um misterio para você.<br>Bora Maratonar? <br><button class = "btnMara"><a href="filmes.html" style="text-decoration: none; color: aliceblue; font-family: 'Poppins',sans-serif;">Assistir</a></button></h3>
+        if (pontos == 10 || pontos == 20 || pontos == 0) {
+            img.innerHTML = `<h3 class = "ponto">Ops! Você acertou ${pontos}/60 Parece que o cavaleiro das trevas ainda é um misterio para você.<br>Bora Maratonar? <br><button class = "btnMara"><a href="filmes.html" style="text-decoration: none; color: aliceblue; font-family: 'Poppins',sans-serif;">Assistir</a></button></h3>
             <img src="assets/img/img20.png" class = "imgBat">`
         } else if (pontos == 30) {
-            img.innerHTML = `<h3 class = "ponto">Boa! Com ${pontos} você já ouviu falar. <br> Continue a desvendar os segredos!</h3>
+            img.innerHTML = `<h3 class = "ponto">Boa! Com ${pontos}/60 você já ouviu falar. <br> Continue a desvendar os segredos!</h3>
         <img src="assets/img/img30.png" class = "imgBat">`
         } else if (pontos == 40 || pontos == 50) {
-            img.innerHTML = `<h3 class = "ponto">Excelente! Com ${pontos} Batman já faz parte da sua vida!</h3>
+            img.innerHTML = `<h3 class = "ponto">Excelente! Com ${pontos}/60 Batman já faz parte da sua vida!</h3>
         <img src="assets/img/img40.png" class = "imgBat">`
         } else {
             img.innerHTML = `<h3 class = "ponto"></h3>
-        <h3 class="ponto">Você teve a pontuação total de ${pontos}!! <br> Você já pode virar o proximo Robin :)</h3>
+        <h3 class="ponto">Você teve a pontuação total de ${pontos}/60!! <br> Você já pode virar o proximo Robin :)</h3>
         <img src="assets/img/img60.png" class = "imgBat"><br><br>`
         }
 
 
 
-        setTimeout(function () {
-            img.innerHTML = "";
+        /*setTimeout(function () {
             iptnota.value = "";
             iptnota2.value = "";
             iptnota3.value = "";
             iptnota4.value = "";
             iptnota5.value = "";
             iptnota6.value = "";
-
-        }, 5000)
-
+        }, 1000)*/
     }
-/*
-    function atualizarGraficoEstatisticas() {
-        console.log("Buscando estatísticas globais do quiz...");
-
-        fetch("/pontos/estatisticas-quiz", {
-            method: "GET",
-        })
-            .then(function (resposta) {
-                if (!resposta.ok) {
-                    console.error("Houve um erro na API ao buscar estatísticas!");
-                    return resposta.text().then(texto => { throw new Error(texto); });
-                }
-
-                return resposta.json();
-            })
-            .then(function (json) {
-                console.log("Dados do quiz: ", json);
-
-                const dadosQuiz = json;
-
-                const acertosTotais = dadosQuiz.acertos_totais || 0;
-                const acertosAltos = dadosQuiz.acertos_altos || 0;
-                const acertosBaixos = dadosQuiz.acertos_baixos || 0;
-                const totalJogadores = dadosQuiz.total_jogadores || 0;
-
-                const ctx = document.getElementById('myChart');
-/*
-                if (window.quizChart instanceof Chart) {
-                    window.quizChart.destroy();
-                }
-
-                window.quizChart = -- comentario para aqui
-
-
-                 new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Pontuação Máxima (60/60)', 'Acertos Alto (40-50)', 'Acertos Baixos (20-30)', 'Total Jogadores'],
-                        datasets: [{
-                            label: `Números de jogadores: ${totalJogadores}`,
-                            data: [acertosTotais, acertosAltos, acertosBaixos, totalJogadores],
-                            backgroundColor: [
-                                'rgba(183, 236, 37, 0.64)',
-                                'rgba(255, 159, 64, 0.6)',
-                                'rgba(255,99,132,0.6)',
-                                'rgba(54,162,235,0.6)'
-                            ],
-                            borderColor: [
-                                'rgba(179, 190, 12, 1)',
-                                'rgba(255,159,64,1)',
-                                'rgba(255,99,132,1)',
-                                'rgba(54,162,235,1)'
-                            ],
-                            borderWidth: 2
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                title: {
-                                    display: true,
-                                    text: 'Contagem de Usuários'
-                                }
-                            }
-                        }
-                    }
-                });
-            })
-            .catch(function (erro) {
-                console.error("Erro de conexão ao buscar estatísticas", erro);
-            });
-    }
-
-    window.onload = atualizarGraficoEstatisticas;
-    
-
-    var nota1 = []
-    var nota2 = []
-    var nota3 = []
-    var nota4 = []
-    function nota() {
-        var car1 = Number(iptCar1.value);
-        var car2 = Number(iptCar2.value);
-        var car3 = Number(iptCar3.value);
-        var car4 = Number(iptCar4.value);
-
-        var soma = 0;
-
-        nota1.push(car1);
-        nota2.push(car2);
-        nota3.push(car3);
-        nota4.push(car4);
-
-        console.log(nota1)
-        console.log(nota2)
-        console.log(nota3)
-        console.log(nota4)
-
-        for(var i = 0; i < nota1.length; i++) {
-            soma = nota1 + nota2 + nota3 + nota4
-
-            console.log(`A nota total dos carro é: ${soma}`)
-        }
-       
-    }
-*/
 
 function idCarro() {
     var idadeCarro = Number(iptIdade.value)
     var ax_math = (Math.random() * 3 + 1).toFixed(0)
-    var imagem = ""
-/*
-    if(idadeCarro <= 17) {
-        msg.innerHTML = `Infelizmente você é de menor e não tem habilitação para dirigir meus Batmóveis...<br><br> 
-        <img src="https://i.pinimg.com/1200x/7f/f1/2c/7ff12c1595db318d96df0791f467613b.jpg" alt="Batman triste" style="width: 150px; height: 150px;">
-`
+
+
+    if(idadeCarro <= 17 || idadeCarro == 0 || iptIdade.value == "") {
+        imagem.innerHTML = `<span class = "txtAletorio">Infelizmente você é de menor e não tem <br> habilitação para dirigir meus Batmóveis...</span><br><br> 
+        <img src="https://i.pinimg.com/1200x/7f/f1/2c/7ff12c1595db318d96df0791f467613b.jpg" alt="Batman triste" style="width: 350px; height: 350px;">`
+
     }else if(ax_math == 1) {
-        imagem.innerHTML = `<img src="assets/img/Car2022.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        imagem.innerHTML = `<img src="assets/img/Car2022.png" class = "img-carrosAle">
 `
     }else if(ax_math == 2) {
-        imagem.innerHTML = `<img src="assets/img/Car2022.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        imagem.innerHTML = `<img src="assets/img/audiR8.png" class = "img-carrosAle">
 `
     }else if(ax_math == 3) {
-        imagem.innerHTML = `<img src="assets/img/Car2022.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        imagem.innerHTML = `<img src="assets/img/civicBat.png" class = "img-carrosAle">
 `
     }else if(ax_math == 4) {
-        imagem.innerHTML = `<img src="assets/img/Car2022.png" alt="Carro de tanque" style="width: 500px; height: auto;">
+        imagem.innerHTML = `<img src="assets/img/CarTruq.png" class = "img-carrosAle">
 `
-    }*/
+    }
+
+    setTimeout(function() {
+        imagem.innerHTML = "";
+    }, 10000);
+    setTimeout(function() {
+            window.location = "#imagem";
+          }, 900);
+
+    iptIdade.value = "";
 
     console.log("<br>" + ax_math)
 }

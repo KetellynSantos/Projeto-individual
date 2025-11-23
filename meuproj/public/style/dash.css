@@ -11,7 +11,7 @@ h1 {
 }
 
 .sec-kpi {
-    color: black;
+    color: rgb(223, 207, 207);
     font-family: "Poppins", sans-serif;
     display: flex;
     gap: 25px;
@@ -25,6 +25,28 @@ h1 {
     background-color: #dedede;
     padding: 15px 30px;
     border-radius: 24px;
+}
+
+.fundImg {
+    background-image: url(https://i.pinimg.com/736x/32/d6/dd/32d6ddfdfdec72f6a54535eb86588325.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fundImg2 {
+    background-image: url(https://i.pinimg.com/736x/39/b0/03/39b0032de2b7573d56a9ceb76e8e4fe8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fundImg3 {
+    background-image: url(https://i.pinimg.com/736x/75/99/9f/75999f0892fb84c59eaa5519783f1932.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: blue;
 }
 
 .kpi-sec {
