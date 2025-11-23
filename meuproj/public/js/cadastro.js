@@ -3,7 +3,6 @@
   let listaEmpresasCadastradas = [];
 
   function cadastrar() {
-    //aguardar();
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
@@ -11,7 +10,6 @@
     var apelidoVar = apelido_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-
 
     // Verificando se há algum campo em branco
     if (
@@ -21,13 +19,20 @@
       confirmacaoSenhaVar == ""
     ) {
       cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
-
-     //finalizarAguardar();
+      mensagem_erro.innerHTML = "(Preencha todos os campos)";
+      setTimeout(sumirMensagem, 4000);
+       // "(Mensagem de erro para todos os campos em branco)";
       return false;
     } else {
-      setInterval(sumirMensagem, 5000);
+      setTimeout(sumirMensagem, 5000);
+    }
+
+    // Verificar se senhas coincidem
+    if(senhaVar !== confirmacaoSenhaVar) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML = "As senhas não coincidem!";
+      setTimeout(sumirMensagem, 4000);
+      return false;
     }
 
     // Enviando o valor da nova input
@@ -37,8 +42,6 @@
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
         nomeServer: nomeVar,
         apelidoServer: apelidoVar,
         senhaServer: senhaVar
@@ -48,6 +51,9 @@
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
+
+          //finalizarAguardar();
+
           cardErro.style.display = "block";
 
           mensagem_erro.innerHTML =
@@ -55,20 +61,28 @@
 
           setTimeout(() => {
             window.location = "login.html";
-          }, "2000");
+          }, 2000);
 
-        //  limparFormulario();
-         // finalizarAguardar();
         } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
+
+          resposta.text().then(msg => {
+            //finalizarAguardar();
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML = msg;
+          })
+         // throw "Houve um erro ao tentar realizar o cadastro!";
         }
       })
       .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-       // finalizarAguardar();
+      //finalizarAguardar();
       });
 
     return false;
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
   }
 /*
   // Listando empresas cadastradas 
@@ -95,3 +109,8 @@
   function sumirMensagem() {
     cardErro.style.display = "none";
   }
+/*
+  nome_input.value = "";
+  apelido_input.value = "";
+  senha_input.value = "";
+  confirmacao_senha_input.value = ""; */
