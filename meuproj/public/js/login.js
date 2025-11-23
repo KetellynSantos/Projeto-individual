@@ -11,7 +11,7 @@
             return false;
         }
         else {
-            setInterval(sumirMensagem, 5000)
+            setTimeout(sumirMensagem, 5000)
         }
 
         console.log("FORM LOGIN: ", apelidoVar);
@@ -51,8 +51,9 @@
                 console.log("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {
-                    console.error(texto);
-                    finalizarAguardar(texto);
+                    mensagem_erro.innerHTML = texto;
+                    cardErro.style.display = "block";
+                    setTimeout(sumirMensagem, 5000);
                 });
             }
 
