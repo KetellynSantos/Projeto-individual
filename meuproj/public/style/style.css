@@ -24,6 +24,10 @@ body {
     justify-content: center;
 }
 
+.img-inicio {
+    border-radius: 60px;
+}
+
 .prisecao {
     display: flex;
     text-align: center;

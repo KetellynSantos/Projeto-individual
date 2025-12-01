@@ -89,12 +89,20 @@ ul {
   display: none;
   background-color: #fff;
   color: black;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
   width: 230px;
   position: fixed;
-  border-radius: 4px;
-  border: #ED145B 3px solid;
+  border-radius: 12px;
+  border: #890b0b 3px solid;
   padding: 10px;
-  margin-right: 10%;
+  margin-top: 70px;
+ margin-right: 5%;
+}
+
+.card_erro:hover {
+  color: aliceblue;
+  background-color: #6D0505;
 }
 
 

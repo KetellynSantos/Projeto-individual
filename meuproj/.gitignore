@@ -3,3 +3,44 @@ node_modules
 package-lock.json
 
 .github
+
+
+<!--
+#<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo/batmanLogo (2).png" type="image/x-icon">
+         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/login.css">
+    <title>KittyWay | Login</title>
+</head>
+<body>
+     <header class="inicio">
+        <ul>
+            <a href="index.html"><img src="logo/batLogCop.png" alt="" class="lista"></a>
+            <li><a href="index.html" class="lista">Home</a></li>
+            <li><a href="batmoveis.html" class="lista">Batmoveis</a></li>
+            <li><a href="filmes.html" class="lista">Filmes</a></li>
+            <li><a href="login.html" class="log">Login</a></li>
+        </ul>
+    </header>
+
+    <div class="main">
+        <div class="acesso">
+            <h1>Login</h1>
+
+            <input type="text" class="login" placeholder="Apelido">
+            <input type="text" class="login" placeholder="Senha">
+
+            <button class="btnLog">Entrar</button>
+
+            <p class="cad">Não tenho  cadastro?  <a href="cadastro.html">Cadastrar</a></p>
+        </div>
+    </div>
+</body>
+</html>
+-->

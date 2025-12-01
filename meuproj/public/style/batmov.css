@@ -192,7 +192,7 @@ input {
 }
 
 .carAlea {
-   height: 142vh;
+   height: 125vh;
 }
 
 .txt {
@@ -206,10 +206,19 @@ input {
 .iptId {
     width: 70%;
     border: none;
+    color: aliceblue;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
 }
 
 .btn-ver {
     margin-top: 32px;
+    width: 40%;
+    padding: 10px 15px;
+}
+
+.btn-ver:hover {
+    background-color: #2c0606;
 }
 
 .card-car {
@@ -243,3 +252,14 @@ input {
     font-weight: 600;
     color: aliceblue;
 }
+
+ .divAleatorio {
+        display: flex;
+        color: aliceblue;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+    }
+
+    p {
+        font-size: 20px;
+    }

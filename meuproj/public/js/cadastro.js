@@ -1,38 +1,59 @@
 
-  // Array para armazenar empresas cadastradas para validação de código de ativação 
-  let listaEmpresasCadastradas = [];
+/* 
+Array para armazenar empresas cadastradas para validação de código de ativação 
+let listaEmpresasCadastradas = [];
+*/
 
-  function cadastrar() {
-
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = nome_input.value;
-    var apelidoVar = apelido_input.value;
-    var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
-
-    // Verificando se há algum campo em branco
-    if (
-      nomeVar == "" ||
-      apelidoVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == ""
-    ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML = "(Preencha todos os campos)";
-      setTimeout(sumirMensagem, 4000);
+function cadastrar() {
+  
+  //Recupere o valor da nova input pelo nome do id
+  // Agora vá para o método fetch logo abaixo
+  var nomeVar = nome_input.value;
+  var apelidoVar = apelido_input.value;
+  var senhaVar = senha_input.value;
+  var confirmacaoSenhaVar = confirmacao_senha_input.value;
+  
+  // Verificando se há algum campo em branco
+  if (
+    nomeVar == "" ||
+    apelidoVar == "" ||
+    senhaVar == "" ||
+    confirmacaoSenhaVar == ""
+  ) {
+    cardErro.style.display = "block";
+    mensagem_erro.innerHTML = "(Preencha todos os campos)";
+    setTimeout(sumirMensagem, 4000);
+    nome_input.value = "";
+    apelido_input.value = "";
+    senha_input.value = "";
+    confirmacao_senha_input.value = "";
        // "(Mensagem de erro para todos os campos em branco)";
       return false;
     } else {
       setTimeout(sumirMensagem, 5000);
     }
+    
+/*
+    if(senhaVar.includes('@') || senhaVar.includes('#') || senhaVar.includes('!') || senhaVar.includes('&')) {
+        cardErro.style.display = "block";
+      mensagem_erro.innerHTML = "A senha precisar ter um caractere especial!";
+         setTimeout(sumirMensagem, 4000);
+      return false;
+    } else {
+      setTimeout(sumirMensagem, 5000);
+    }
+*/
 
     // Verificar se senhas coincidem
     if(senhaVar !== confirmacaoSenhaVar) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML = "As senhas não coincidem!";
+      senha_input.value = "";
+      confirmacao_senha_input.value = "";
       setTimeout(sumirMensagem, 4000);
       return false;
+    } else {
+      setTimeout(sumirMensagem, 5000);
     }
 
     // Enviando o valor da nova input

@@ -7,7 +7,7 @@
 body {
     height: 100vh;
     background-image: url('../assets/img/imgCad.jpg');
-   display: block;
+    display: block;
     justify-content: center;
     align-items: center;
     background-size: cover;
@@ -16,7 +16,7 @@ body {
 }
 
 .alert_erro {
-    width: 100%; 
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -24,7 +24,26 @@ body {
 
 .card_erro {
     display: none;
-    background-color: #ff4d4dc0;
+    background-color: #fff;
+    color: black;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    width: 230px;
+    position: fixed;
+    border-radius: 12px;
+    border: #890b0b 3px solid;
+    padding: 10px;
+    margin-top: 70px;
+    margin-left: 5%;
+}
+
+.card_erro:hover {
+    color: aliceblue;
+    background-color: #6D0505;
+}
+
+/* display: none;
+    background-color: #960b0bc0;
     color: white;
     padding: 10px 20px;
     border-radius: 8px;
@@ -32,14 +51,14 @@ body {
     font-family: "Poppins",sans-serif;
     text-align: center;
     width: 80%;
-    max-width: 350px;
-}
+    border-radius: 32px;
+    margin-top: 5%;
+    max-width: 350px;*/
 
 .main-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
 }
 
 .mod {
@@ -53,6 +72,7 @@ body {
     gap: 15px;
     margin-top: 10%;
 }
+
 /*
 .inicio {
     background-color: #d9d9d98f;
@@ -132,7 +152,7 @@ ul {
 
 .entrada::placeholder {
     color: rgba(0, 0, 0, 0.74);
-    
+
 }
 
 .btnCad {

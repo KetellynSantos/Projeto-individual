@@ -28,17 +28,17 @@
         <ul>
             <a href="index.html"><img src="assets/logo/batLogCop.png" alt="" class="lista"></a>
             <li><a href="index.html" class="lista">Home</a></li>
-            <li><a href="dash.html"  class="lista">Dashboard</a></li>
             <li><a href="batmoveis.html"  class="lista">Batmoveis</a></li>
+            <li><a href="dash.html"  class="lista">Dashboard</a></li>
             <li><a href="filmes.html" class="lista">Filmes</a></li>
-            <li><a href="filmes.html" class="lista">|</a></li>
-            <li><a href="sobremim.html" class="log">Sobre mim</a></li>
+            <!--<li><a href="filmes.html" class="lista">|</a></li>
+            <li><a href="sobremim.html" class="log">Sobre mim</a></li>-->
         </ul>
     </header>
 
     <section class="inicio_bat">
         <div class="bemVindo">
-            <span class="texto">Bem-Vindos ao <br> Batmoveis</span>
+            <span class="texto">Bem-Vindos ao <br> Batmoveis, <span id="nomePessoa">#</span></span> 
             <a href="#perso" target="_self"><button class="btn-jogo">Jogar</button></a>
         </div>
 
@@ -129,7 +129,7 @@
 
     <section class="carAlea">
         <div class="card-car">
-            <h3 class="txt">Descubra seu <span>Batmovel</span> atraves da sua idade!</h3>
+            <h3 class="txt">Descubra seu <span>Batmóvel</span> atraves da sua idade!</h3>
             <input type="number" id="iptIdade" placeholder="Digite sua idade" class="iptId"><br>
             <button onclick="idCarro()" class="btn-jogo btn-ver">Verificar</button>
         </div>
@@ -200,6 +200,8 @@
 
 </body>
 <script>
+
+     nomePessoa.innerHTML = sessionStorage.APELIDO_USUARIO;
 
     function enviarPontuacaoParaAPI() {
         var nota1 = Number(iptnota.value)
@@ -306,7 +308,7 @@
         } else if (pontos == 40 || pontos == 50) {
             img.innerHTML = `<h3 class = "ponto">Excelente! Com ${pontos}/60 Batman já faz parte da sua vida!</h3>
         <img src="assets/img/img40.png" class = "imgBat">`
-        } else {
+        } else{
             img.innerHTML = `<h3 class = "ponto"></h3>
         <h3 class="ponto">Você teve a pontuação total de ${pontos}/60!! <br> Você já pode virar o proximo Robin :)</h3>
         <img src="assets/img/img60.png" class = "imgBat"><br><br>`
@@ -334,22 +336,60 @@ function idCarro() {
         <img src="https://i.pinimg.com/1200x/7f/f1/2c/7ff12c1595db318d96df0791f467613b.jpg" alt="Batman triste" style="width: 350px; height: 350px;">`
 
     }else if(ax_math == 1) {
-        imagem.innerHTML = `<img src="assets/img/Car2022.png" class = "img-carrosAle">
+        imagem.innerHTML = ` <div class="divAleatorio">
+
+        <div>
+            <img src="assets/img/Car2022.png" class = "img-carrosAle"> 
+        </div>
+        <div>
+                <span class="textIdade"><h3>Batruque</h3> </span>
+                <p>Esse foi o carro usado no último filme do Batman, dito isso, não é qualquer pessoa que pode ter ele. Você é uma pessoa sensacional, Parabéns!</p></span>
+                
+            </div>
+        </div>
 `
     }else if(ax_math == 2) {
-        imagem.innerHTML = `<img src="assets/img/audiR8.png" class = "img-carrosAle">
+        imagem.innerHTML = `<div class="divAleatorio">
+        <div>
+            <img src="assets/img/audiR8.png" class = "img-carrosAle">
+        </div>
+        <div>
+                <span class="textIdade"><h3>Audimóvel</h3> </span>
+                <p>Um dos carros mais veloz do Bruce, a audi passa um ar de poder. Você é mais um (a) chefão / chefona</p></span>
+            </div>
+        </div>
 `
     }else if(ax_math == 3) {
-        imagem.innerHTML = `<img src="assets/img/civicBat.png" class = "img-carrosAle">
+        imagem.innerHTML = `<div class="divAleatorio">
+        <div>
+            <img src="assets/img/civicBat.png" class = "img-carrosAle">
+        </div>
+        <div>
+                <span class="textIdade"><h3>BatCivic</h3> </span>
+                <p>Esse claramente é um dos favoritos, o Civic G10 tem um peso muito grande pelo seu desing.. Você tem sorte de esse carro, com certeza todos os vilões tem inveja de você!</p></span>
+                
+            </div>
+        </div>
 `
     }else if(ax_math == 4) {
-        imagem.innerHTML = `<img src="assets/img/CarTruq.png" class = "img-carrosAle">
+        imagem.innerHTML = `<div class="divAleatorio">
+        <div>
+            <img src="assets/img/CarTruq.png" class = "img-carrosAle">
+        </div>
+        <div>
+                <span class="textIdade"><h3>Batcombate</h3> </span>
+                <p>Usado como um dos carros mais fortes do Batman, ele foi o carro com mais potência dos filmes. Você é uma pessoa com grande potêncial e forte, Parabéns!!</p></span>
+                
+            </div>
+        </div>
+
 `
     }
-
+/*
     setTimeout(function() {
         imagem.innerHTML = "";
-    }, 10000);
+    }, 10000);*/
+
     setTimeout(function() {
             window.location = "#imagem";
           }, 900);

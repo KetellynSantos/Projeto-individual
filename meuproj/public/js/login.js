@@ -6,7 +6,9 @@
 
         if (apelidoVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "<span>Mensagem de erro para todos os campos em branco </span>";
+            apelido_input.value = ""; 
+            senha_input.value = "";
            // finalizarAguardar();
             return false;
         }
@@ -38,7 +40,6 @@
                     sessionStorage.ID_USUARIO = json.id;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.APELIDO_USUARIO = json.apelido;
-                  //  sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
                     setTimeout(function () {
                         window.location = '../batmoveis.html';

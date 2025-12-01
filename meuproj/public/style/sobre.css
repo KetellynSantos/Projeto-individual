@@ -60,3 +60,7 @@ body {
 .img-eu {
     border-radius: 100%;
 }
+
+.memo {
+    display: flex;
+}
