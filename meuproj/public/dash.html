@@ -102,23 +102,26 @@
                     window.quizChart.destroy();
                 }
 
+                'rgba(255, 159, 64, 0.6)',
+                'rgba(255,159,64,1)'
+
                 window.quizChart =*/
                  new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ['Pontuação Máxima (60/60)', 'Acertos Alto (40-50)', 'Acertos Baixos (20-30)', 'Total Jogadores'],
+                        labels: ['Ponto Máximo (60/60)', 'Acertos Alto (40-50)', 'Acertos Baixos (20-30)', 'Total Jogadores'],
                         datasets: [{
                             label: `Números de jogadores: ${totalJogadores}`,
                             data: [acertosTotais, acertosAltos, acertosBaixos, totalJogadores],
                             backgroundColor: [
-                                'rgba(183, 236, 37, 0.64)',
-                                'rgba(255, 159, 64, 0.6)',
+                                'rgba(255, 0, 0, 0.64)',
+                                '#863AF0',
                                 'rgba(255,99,132,0.6)',
                                 'rgba(54,162,235,0.6)'
                             ],
                             borderColor: [
-                                'rgba(179, 190, 12, 1)',
-                                'rgba(255,159,64,1)',
+                                'rgba(255, 0, 0, 1)',
+                                '#863AF0',
                                 'rgba(255,99,132,1)',
                                 'rgba(54,162,235,1)'
                             ],
