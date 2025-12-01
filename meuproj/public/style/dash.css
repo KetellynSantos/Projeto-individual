@@ -6,25 +6,47 @@ h1 {
     font-family: "Chakra Petch", sans-serif;
     color: aliceblue;
     text-align: center;
-    font-size: 50px;
-    margin-top: 70px;
+    font-size: 45px;
+   margin-top: 2px; 
+}
+
+.dash-barra {
+    max-width: 650px;
+    margin-left: auto; 
+    margin-right: auto;
+    border: 2px solid rgb(138, 19, 19);
+    border-radius: 32px;
+    margin-top: 15px;
+}
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+h3 {
+    font-size: 15px;
 }
 
 .sec-kpi {
     color: rgb(223, 207, 207);
     font-family: "Poppins", sans-serif;
     display: flex;
+   /* flex-direction: column;*/
     gap: 25px;
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    /*margin-top: 100px;*/
 }
 
 .kpi-card {
     background-color: #dedede;
-    padding: 15px 30px;
+    padding: 8px 30px;
     border-radius: 24px;
+    margin-bottom: 2px;
+    background-color: rgb(0, 0, 0, 0.5);
 }
 
 .fundImg {
